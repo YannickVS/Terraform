@@ -46,7 +46,7 @@ resource "aws_apigatewayv2_api" "http-api-GW" {
 }
 
 #aws_lambda_permission
-resource "aws_lambda_permission" "apigw" {
+resource "aws_lambda_permission" "permission-GW" {
 	action        = "lambda:InvokeFunction"
 	function_name = aws_lambda_function.lambdafunc.arn
 	principal     = "apigateway.amazonaws.com"
